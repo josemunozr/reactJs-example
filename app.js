@@ -1,12 +1,18 @@
-var empleados = [
-  { nombre: "Pepe", email: "pepe@correo.com", imagen: "foto1.png" },
-  { nombre: "Paco", email: "paco@correo.com", imagen: "foto2.png" },
-  { nombre: "Manolo", email: "manolo@correo.com", imagen: "foto3.png" }
-];
-
 class App extends React.Component {
+
+  constructor() {
+    super();
+    this.state = {
+      empleados: [
+        { nombre: "Pepe", email: "pepe@correo.com", imagen: "foto1.png" },
+        { nombre: "Paco", email: "paco@correo.com", imagen: "foto2.png" },
+        { nombre: "Manolo", email: "manolo@correo.com", imagen: "foto3.png" }
+      ]
+    }
+  }
+
   render() {
-    return <ListaEmpleados empleados={empleados} />;
+    return <ListaEmpleados empleados={this.state.empleados} />;
   }
 }
 
